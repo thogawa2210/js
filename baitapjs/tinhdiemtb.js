@@ -1,0 +1,11 @@
+let inputvatly;
+let inputhoahoc;
+let inputsinhhoc;
+inputvatly= prompt("Nhap Diem Vatly");
+inputhoahoc = prompt("Nhap Diem Hoahoc");
+inputsinhhoc = prompt("Nhap Diem Sinhhoc");
+let vatly = parseInt(inputvatly);
+let hoahoc = parseInt(inputhoahoc);
+let sinhhoc = parseInt(inputsinhhoc);
+let tb = (vatly+hoahoc+sinhhoc)/3;
+document.write("Diem trung binh: " + tb);
