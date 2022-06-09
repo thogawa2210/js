@@ -1,6 +1,8 @@
-
+let a = document.getElementById("a").innerHTML;
+let b = document.getElementById("b").innerHTML;
+let c = document.getElementById("c").innerHTML;
+let d = document.getElementById("d").innerHTML;
 function aa() {
-    let a = document.getElementById("a").innerHTML;
     if (a == 1) {
         a = 5;
         document.getElementById("a").innerHTML = a;
@@ -13,7 +15,6 @@ function aa() {
     }
 }
 function bb() {
-    let b = document.getElementById("b").innerHTML;
     if (b == 2) {
         b = 6;
         document.getElementById("b").innerHTML = b;
@@ -26,7 +27,6 @@ function bb() {
     }
 }
 function cc() {
-    let c = document.getElementById("c").innerHTML;
     if (c == 3) {
         c = 7;
         document.getElementById("c").innerHTML = c;
@@ -39,7 +39,6 @@ function cc() {
     }
 }
 function dd() {
-    let d = document.getElementById("d").innerHTML;
     if (d == 4) {
         d = 8;
         document.getElementById("d").innerHTML = d;
@@ -52,17 +51,12 @@ function dd() {
     }
 }
 function kq() {
-    let a = document.getElementById("a").innerHTML;
-    let b = document.getElementById("b").innerHTML;
-    let c = document.getElementById("c").innerHTML;
-    let d = document.getElementById("d").innerHTML;
     if (a == 1 && b == 2 && c == 3 && d == 4) {
         document.getElementById("kq").innerHTML = "BINGO"
-    }
-    if (a == 5 && b == 6 && c == 7 && d == 8) {
+    }else if (a == 5 && b == 6 && c == 7 && d == 8) {
         document.getElementById("kq").innerHTML = "BINGO"
-    }
-    if (a == 9 && b == 10 && c == 11 && d == 12) {
+    }else if (a == 9 && b == 10 && c == 11 && d == 12) {
         document.getElementById("kq").innerHTML = "BINGO"
-    }
+    }else
+        document.getElementById("kq").innerHTML = "Hay thu lai"
 }
