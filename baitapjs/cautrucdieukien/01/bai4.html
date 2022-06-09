@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<input type="button" onclick=bd() value = "Bắt đầu">
+<br>
+<p><strong id="kq"></strong></p>
+<script>
+  function bd(){
+    let a = +prompt("Nhập số a = ","");
+    let b = +prompt("Nhập số b = ","");
+    let c = +prompt("Nhập số c = ","");
+    if(a>b) {
+        if (a > b) {
+            document.getElementById("kq").innerHTML = "a là số lớn nhất";
+        } else {
+            document.getElementById("kq").innerHTML = "c là số lớn nhất";
+        }
+    }else{
+        if(b>c){
+            document.getElementById("kq").innerHTML = "b là số lớn nhất";
+        }else{
+            document.getElementById("kq").innerHTML = "c là số lớn nhất";
+        }
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<input type="button" onclick=bd() value = "Bắt đầu">
+<script>
+    function bd(){
+        let a = prompt("Nhập số a = ","a");
+        let b = prompt("Nhập số b = ","b");
+        let c;
+        c = a%b;
+        if (c == 0){
+            alert("a chia hết cho b");
+        }else{
+            alert("a không chia hết cho b");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="button" onclick=bd() value = "Bắt đầu">
+<br>
+<p><strong id="kq"></strong></p>
+<script>
+    function bd(){
+        let a = +prompt("Nhập số tuổi = ","");
+        if(a>16){
+            document.getElementById("kq").innerHTML = "Đủ tuổi vào lớp 10";
+        }else{
+            document.getElementById("kq").innerHTML = "Chưa đủ tuổi vào lớp 10";
+        }
+    }
+</script>
+</body>
+</html>
