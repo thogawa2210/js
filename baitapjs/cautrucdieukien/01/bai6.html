@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h3>Tính hoa hồng</h3>
+<p>Nếu doanh số bán hàng dưới 100tr thì hoa hồng được 1%. Nếu doanh số từ 100tr đến 200tr thì hoa hồng được tính 2%. Nếu doanh số trên 200tr thì hoa hồng được tính là 3%</p>
+<br>
+<input type="button" onclick=bd() value = "Bắt đầu">
+<br>
+<p><strong id="kq"></strong></p>
+<script>
+    function bd(){
+        let a = +prompt("Nhập doanh số bán hàng (triệu đồng) = ","");
+        if (a<100){
+            b = a/100
+            document.getElementById("kq").innerHTML = "Hoa hồng = " + b + " triệu đồng";
+        }else if (100<= a <200){
+            b = a*2/100
+            document.getElementById("kq").innerHTML = "Hoa hồng = " + b + " triệu đồng";
+        }else {
+            b = a*3/100
+            document.getElementById("kq").innerHTML = "Hoa hồng = " + b + " triệu đồng";
+        }
+    }
+</script>
+</body>
+</html>

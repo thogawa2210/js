@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h3>Tính cước điện thoại</h3>
+<p>Cước cố định là 25.000VNĐ một tháng. Cước gọi nội mạng là 500VNĐ một phút. Cước ngoại mạng là 1000VNĐ một phút.</p>
+<br>
+<input type="button" onclick=bd() value = "Bắt đầu">
+<br>
+<p><strong id="kq"></strong></p>
+<script>
+    function bd(){
+        let a = +prompt("Nhập doanh thời gian gọi nội mạng theo phút = ","");
+        let b = +prompt("Nhập doanh thời gian gọi ngoại mạng theo phút = ","");
+        let c = 25000 + a*500 + b*1000;
+        document.getElementById("kq").innerHTML = "Cước phí phải trả là " + c + "VNĐ";
+    }
+</script>
+</body>
+</html>
