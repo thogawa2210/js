@@ -34,8 +34,8 @@ function cc() {
         c = 11;
         document.getElementById("c").innerHTML = c;
     }else{
-        c = "3";
-        document.getElementById("c").innerHTML = d;
+        c = 3;
+        document.getElementById("c").innerHTML = c;
     }
 }
 function dd() {

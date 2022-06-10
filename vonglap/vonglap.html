@@ -5,10 +5,14 @@
     <title>Vòng lặp</title>
 </head>
 <body>
+<h2> Javascript Loops</h2>
+<p id="demo"></p>
 <script>
-  for(let i=1; i <=10; i++){
-    console.log(i);
-  }
+    let text ="";
+    for(let i=0; i<5; i++){
+        text += "The number is "+ i + "<br>"
+    }
+    document.getElementById("demo").innerHTML = text;
 </script>
 </body>
 </html>
