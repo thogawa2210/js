@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+  let n1 = 0, n2 = 1, nextTerm;
+  while(n2%5 != 0){
+  nextTerm = n1 + n2;
+  n1 = n2;
+  n2 = nextTerm;
+  }
+  console.log(n2);
+</script>
+</body>
+</html>

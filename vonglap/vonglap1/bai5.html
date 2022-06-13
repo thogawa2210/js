@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    const number = +prompt('Enter the number of terms: ');
+    let n1 = 0, n2 = 1, nextTerm;
+    let sum = 0;
+    for (let i = 1; i <= number; i++) {
+        sum = sum + n1;
+        console.log(n1);
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+    console.log("Tong = " + sum);
+</script>
+</body>
+</html>

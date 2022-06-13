@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết ra 20 số nguyên đầu tiên</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Nhap so luong so nguyen to: ")
+    let n = 0;
+    let count = 0;
+    while (count < numbers) {
+        n = n+1;
+        let flag = true;
+        if (n < 2) {
+            flag = false;
+        } else if (n == 2) {
+            flag = true;
+        } else if (n % 2 == 0) {
+            flag = false;
+        } else {
+            for (let i = 3; i < n - 1; i += 2) {
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag == true) {
+            document.write(n + "<br>")
+            count = count + 1
+        }
+    }
+</script>
+</body>
+</html>
