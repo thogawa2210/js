@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+  let min = +prompt("Nhập số bé nhất trong khoảng: ");
+  let max = +prompt("Nhập số lớn nhất trong khoảng:");
+  let n = Math.floor(Math.random() * (max - min + 1)) + min;
+  let m = +prompt("Nhập số của bạn: ");
+  while ( m!= n){
+      if(m>n){
+          alert("Số bạn nhập lớn hơn!");
+          m = +prompt("Hãy nhập lại:");
+      }else{
+          alert("Số bạn nhập bé hơn!");
+          m = +prompt("Hãy nhập lại:");
+      }
+  }
+  alert("Bạn đã đoán đúng!")
+</script>
+</body>
+</html>
