@@ -2,25 +2,16 @@
 <html>
 <body>
 <script>
-        for (let n = 2; n < 72; n++) {
-            let flag = true;
-            if (n < 2) {
-                flag = false;
-            } else if (n == 2) {
-                flag = true;
-            } else if (n % 2 == 0) {
-                flag = false;
-            } else {
-                for (let i = 3; i < n - 1; i += 2) {
-                    if (n % i == 0) {
-                        flag = false;
-                        break;
-                    }
-                }
-            }
-            if (flag == true) {
-                document.write(n + "<br>")
-            }
+        let i = "123456789";
+        console.log(i.length);
+        let a = [];
+        // if(i[3]%2==0){
+        //     console.log("ok")
+        for(let j=0;j<i.length;j++){
+            a.push(parseInt(i[j]));
+        }
+        for(let x=0; x<a.length;x++){
+            document.write(a[x]);
         }
 </script>
 </body>
