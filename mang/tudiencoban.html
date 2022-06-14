@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển đơn giản</title>
+</head>
+<body>
+<script>
+  let english = ['dog','cat','duck','chicken','elephant','fish'];
+  let vietnamese = ['chó','mèo','vịt','gà','voi','cá'];
+  let a = prompt("Nhập từ cần tra cứu(động vật): ")
+  let b = "";
+  for(let i=0;i<english.length;i++){
+      if(a == english[i]){
+          b = vietnamese[i];
+      }
+  }
+  if(b != ""){
+      document.write("Từ bạn nhập có nghĩa là: " + b);
+  }else{
+      document.write("Từ bạn nhập không có trong từ điển!");
+      }
+</script>
+</body>
+</html>
