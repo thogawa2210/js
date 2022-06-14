@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    // Vẽ tam giác 1
+    let tamgiac = "*";
+    for(let x=1; x<6; x++){
+        document.write(tamgiac + "<br>");
+        tamgiac = tamgiac + "*";
+    }
+    // Vẽ tam giác 2
+    for(let x = 5; x>0 ; x--){
+        for(let y = 0; y<x; y++){
+            document.write("*");
+        }
+        document.write("<br>")
+    }
+    // Vẽ tam giác 3
+    for (let x = 1; x<=5; x++){
+        for(let a=1 ; a<x ; a++){
+            document.write("1");
+        }
+        for (let b=x; b<=5 ; b++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    // Vẽ tam giác 4
+    for (let x = 1; x<=5; x++){
+        for(let a=1 ; a<=x ; a++){
+            document.write("*");
+        }
+        for (let b=x; b<5 ; b++){
+            document.write("1");
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

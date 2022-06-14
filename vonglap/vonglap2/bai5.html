@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+  let sotiengui = +prompt("Nhập số tiền gửi: ");
+  let laisuat = +prompt("Nhập lãi suất hàng tháng: ");
+  let thoigian = +prompt("Nhập số tháng gửi tiền: ");
+  let tiennhan = sotiengui;
+  for (let n=1; n<=thoigian; n++){
+      tiennhan = tiennhan*(1+laisuat/100);
+      console.log(tiennhan)
+  }
+  document.write("Số tiền nhận lại là: " + tiennhan.toFixed(0));
+</script>
+</body>
+</html>
