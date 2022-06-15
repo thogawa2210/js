@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let a =[];
+    for(let i=0;i<10;i++){
+        a[i] = prompt('Nhập vào từng phần tử của biến a:');
+    }
+    for(let i=0;i<a.length;i++){
+        if(a[i] == '-'){
+            a[i] = '_';
+        }
+    }
+    document.write('Chuỗi mới là: ' + a);
+</script>
+</body>
+</html>
