@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    let num=[1,2,3,4,5,6,7,8,9,10];
+    let V = +prompt('Nhập vào số bạn muốn tìm: ');
+    let flag = false;
+    for (const value of num) {
+        if(value == V){
+            flag = true
+        }
+    }
+    if (flag){
+        document.write('V is in the array');
+    }else{
+        document.write('V is not in the array');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    let a=[];
+    let b=[];
+    for (let i=0;i<10;i++){
+        a[i] = +prompt('Nhập vào 10 phần tử của biến a:' + (i+1));
+    }
+    for (let j=0;j<10;j++){
+        b[j] = +prompt('Nhập vào 10 phần tử của biến b:' + (j+1));
+    }
+    c = a.concat(b);
+    document.write('Mảng c =' + c);
+</script>
+</body>
+</html>

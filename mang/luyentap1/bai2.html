@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let num=[10,11,12,1,2,3,4,5,20,33];
+    let max = num[0];
+    let index;
+    for (let i=0;i<num.length;i++){
+        if(num[i]>max){
+            max = num[i];
+            index = i;
+        }
+    }
+    document.write('Số lớn nhất trong mảng là: ' + max);
+    document.write('Và nằm ở vị trí: ' + index);
+</script>
+</body>
+</html>

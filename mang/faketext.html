@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea Typing</title>
+</head>
+<body>
+<h2>Type anything slowly</h2>
+<input type="text" style="height: 200px;width: 500px"  id="text" onkeypress=change()>
+<script>
+    let b = 'Bạn đang gõ những gì tôi đã viết sẵn';
+    let str = '';
+    i = 0;
+    x = document.getElementById('text');
+    function change() {
+        console.log(b[i]);
+        for(let j=0;j<1;j++) {
+             str = ''
+            for(let j=0;j<i;j++){
+                x.value = b[i];
+            }
+        }
+        i++;
+        if(i > b.length){
+            i = 0;
+            str = '';
+        }
+        x.value = str
+    }
+</script>
+</body>
+</html>

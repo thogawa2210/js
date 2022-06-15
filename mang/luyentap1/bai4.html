@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<button onclick=add()>Add</button>
+<button onclick=result()>Result</button>
+<script>
+    let num=[];
+    function add(){
+        a = prompt('Nhập vào biến của mảng: ');
+        num.push(a);
+    }
+    function result(){
+        document.write('Mảng bạn nhập vào là: ' + num + '<br>');
+        document.write('Mảng đầu ra là: '+ num.reverse());
+    }
+
+</script>
+</body>
+</html>

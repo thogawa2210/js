@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let num=[10,11,12,1,2,3,4,5,20,33];
+    let max = num[0];
+    let sum = 0;
+    for (let i=0;i<num.length;i++){
+        sum = sum + num[i];
+        if(num[i]>max){
+            max = num[i];
+        }
+    }
+    let tb = sum/(num.length+1);
+    document.write('Số lớn nhất trong mảng là: ' + max + '<br>');
+    document.write('Giá trị trung bình các phần tử trong mảng là: ' + tb.toFixed(0));
+</script>
+</body>
+</html>

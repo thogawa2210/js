@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+    let num=[1,2,3,3,5,6,7,7,9,10];
+    let V = +prompt('Nhập vào số bạn muốn bỏ ra khỏi chuỗi: ');
+    for(let i=9;i>=0;i--) {
+        if (V == num[i]) {
+            num.splice(i,1);
+        }
+    }
+    document.write('Chuỗi sau cùng là: ' + num);
+</script>
+
+</body>
+</html>

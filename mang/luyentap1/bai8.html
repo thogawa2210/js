@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let num=[];
+    for(let i=0;i<10;i++){
+        num[i]= +prompt('Nhập vào số nguyên thứ ' + (i+1) + ' :');
+    }
+    let result=[];
+    for(let j=0;j<10;j++){
+        let max = 0;
+        let index;
+        for(let i=0;i<num.length;i++) {
+            if (num[i] > max) {
+                max = num[i];
+                index = i;
+            }
+        }
+            num.splice(index,1);
+            result.push(max);
+    }
+    document.write(result);
+</script>
+</body>
+</html>
