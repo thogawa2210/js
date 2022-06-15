@@ -1,25 +1,32 @@
-    b = document.getElementById("banco");
-    let banco = [
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0]
-    ];
-function change() {
-    i = +prompt("Nhập vào vị trí hàng muốn thay đổi: ");
-    j = +prompt("Nhập vào vị trí cột muốn thay đổi: ");
-    banco[i][j] = "x";
-    vebanco();
+let b = document.getElementById("carogame");
+
+let board = [];
+let data = "";
+for (let i = 0; i < 5; i++) {
+    board[i] = [0, 0, 0, 0, 0];
 }
-function vebanco() {
-    for (let i = 0; i < 6; i++) {
-        for (let j = 0; j < 6; j++) {
-        document.write(banco[i][j]);
-        }
-    document.write("<br>");
+
+for (let i = 0; i < 5; i++) {
+    data += "<br/>";
+    for (let j = 0; j < 5; j++) {
+        data += board[i][j] + "&nbsp;&nbsp;";
     }
-    document.write('<button onclick=change()>Change value</button>');
-    document.write('<br>');
+}
+
+data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+b.innerHTML = data;
+
+function changeValue() {
+    let positionX = prompt("X: ");
+    let positionY = prompt("Y: ");
+    data = "";
+    board[positionX][positionY] = "x";
+    for (let i = 0; i < 5; i++) {
+        data += "<br/>";
+        for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+    }
+    data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    b.innerHTML = "<hr/>" + data;
 }
