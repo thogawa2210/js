@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập về nhà</title>
+</head>
+<body>
+<script>
+    let x = [
+        [1,3,5,7,9],
+        [2,4,6,8,10],
+        [5,4,3,2,1],
+        [9,8,7,6,5]
+    ]
+    let sum=0;
+    //Phòng có ma: x[1][0], x[2][3]
+    for(let i=0;i<4;i++){
+        for(let j=0;j<5;j++){
+            if(i==1&j==0){
+                for(let a=i;a<4;a++){
+                    x[a][0]=0;
+                }
+            }
+            if(i==2&j==3){
+                for(let b=i;b<4;b++){
+                    x[b][3]=0
+                }
+            }
+        }
+    }
+    for(let i=0;i<4;i++) {
+        for (let j = 0; j < 5; j++) {
+            sum += x[i][j];
+        }
+    }
+    document.write('Tổng số tiền thu được là: ' + sum);
+</script>
+</body>
+</html>
