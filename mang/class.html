@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr=[3,5,6,2,1];
+  let n = +prompt('Nhập vào 1 số');
+  let index;
+  let flag=false;
+  for(let i=0;i<arr.length;i++){
+      if(n===arr[i]){
+          index = i;
+          flag=true;
+          break
+      }else{
+          index = -1;
+      }
+  }
+  if(flag){
+      alert('Số bạn nhập có trong mảng, tại chỉ số'+ index);
+  }else{
+      alert('Số bạn nhập không có trong mảng');
+  }
+</script>
+</body>
+</html>
