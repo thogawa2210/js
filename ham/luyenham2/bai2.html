@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="Nhập vào bán kính hình tròn">
+<button onclick=tinhchuvi()>Tính chu vi hình tròn</button>
+<button onclick=tinhdientich()>Tính diện tích hình tròn</button>
+<br>
+<p id='result'></p>
+<script>
+    function tinhchuvi(){
+        let r = +document.getElementById('input').value;
+        let chuvi = 2*r*3.14;
+        document.getElementById('result').innerHTML = 'Chu vi hình tròn = ' + chuvi;
+    }
+    function tinhdientich(){
+        let r = +document.getElementById('input').value;
+        let dientich = r*r*3.14;
+        document.getElementById('result').innerHTML = 'Diện tích hình tròn = ' + dientich;
+    }
+</script>
+</body>
+</html>
