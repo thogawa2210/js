@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ dối xứng</title>
+</head>
+<body>
+<script>
+
+  function isPalindrome(a){
+      let flag = true;
+    if(a.length ===1){
+        alert('Chuỗi đối xứng!');
+    }else if (a.length % 2 === 0) {
+            for (let i = 0; i < a.length / 2; i++) {
+                if (a[i] !== a[a.length - i - 1]) {
+                    flag = false;
+                    break
+                }
+            }
+    }else{
+        for(let i=0; i<(a.length-1)/2; i++){
+            if (a[i] !== a[a.length - i - 1]) {
+                flag = false;
+                break
+            }
+        }
+      }
+    console.log(flag)
+    if(flag === true){
+        alert('Từ bạn nhập vào là từ đối xứng');
+    }else{
+        alert('Từ bạn nhập vào không phải từ đối xứng');
+    }
+  }
+  isPalindrome('lol');
+</script>
+</body>
+</html>
