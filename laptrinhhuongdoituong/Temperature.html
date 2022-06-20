@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (doC) {
+        this.doC= doC;
+        this.setdoC = function (doC){
+            this.doC = doC;
+        }
+        this.getdoF = function(){
+            return 9/5*this.doC +32;
+        }
+        this.getdoK = function(){
+            return this.doC+273.15;
+        }
+    }
+    let temperature = new Temperature(25);
+    // temperature.setdoC(50);
+    let doF = temperature.getdoF();
+    let doK = temperature.getdoK();
+    document.write('Độ F là '+doF+ 'Độ Kevin là '+ doK);
+
+
+</script>
+</body>
+</html>
