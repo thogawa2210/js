@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Rectangle = function(chieurong,chieudai) {
+        this.chieurong = chieurong;
+        this.chieudai = chieudai;
+        this.setChieurong = function(x){
+            this.chieurong = x;
+        }
+        this.setChieudai = function(y) {
+            this.chieudai = y;
+        }
+        this.getPerimeter = function() {
+            return 2*(this.chieudai + this.chieurong);
+        }
+        this.getArea = function() {
+            return this.chieudai * this.chieurong;
+        }
+        this.getChieurong = function() {
+            return this.chieurong;
+        }
+        this.getChieudai = function() {
+            return this.chieudai;
+        }
+    };
+    let rectangle = new Rectangle(10,15);
+    rectangle.setChieurong(200);
+    rectangle.setChieudai(300);
+    let chieurong = rectangle.getChieurong();
+    let chieudai = rectangle.getChieudai();
+    let perimeter = rectangle.getPerimeter();
+    let area = rectangle.getArea();
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(0,chieurong);
+    ctx.moveTo(0,chieurong);
+    ctx.lineTo(chieudai,chieurong);
+    ctx.moveTo(chieudai,chieurong);
+    ctx.lineTo(chieudai,0);
+    ctx.moveTo(chieudai,0);
+    ctx.lineTo(0,0);
+    ctx.stroke();
+    alert('Diện tích HCN = '+area +' Chu vi HCN = '+perimeter)
+</script>
+</body>
+</html>
