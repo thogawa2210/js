@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Lái Xe</title>
+</head>
+<body>
+<canvas id="myCanvas" width="700px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let canvas = document.getElementById('myCanvas'),
+        context = canvas.getContext('2d');
+
+    make_base();
+
+    function make_base()
+    {
+        base_image = new Image();
+        base_image.src = '../car/car.png';
+        base_image.onload = function(){
+            context.drawImage(base_image, 0, 0);
+        }
+    }
+</script>
+</body>
+</html>
