@@ -5,23 +5,9 @@
     <title>Game Lái Xe</title>
 </head>
 <body>
+<div id='scr'></div>
 <canvas id="myCanvas" width="700px" height="700px" style="border:1px solid #d3d3d3;"></canvas>
-<script>
-    let canvas = document.getElementById('myCanvas'),
-        context = canvas.getContext('2d');
-    make_base();
-    function make_base() {
-        base_image = new Image();
-        base_image.src = 'image/car.png';
-        base_image.onload = function(){
-            context.drawImage(base_image, 350, 350, 50, 75);
-        }
-    }
-    let car = {
-        img: 'image/car.png',
-        position: 'center',
-
-    }
-</script>
+<script src="car.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
