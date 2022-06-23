@@ -1,0 +1,16 @@
+let tv = new Television('OFF', 'VTV1',20);
+let remote = new Remote('myRemote');
+console.log(tv.status);
+remote.changeStatus(tv);
+console.log(tv.status);
+console.log(tv.channel);
+remote.changeChannel(tv,'VTV7');
+console.log(tv.channel);
+console.log(tv.volume);
+remote.changeVolume(tv,30);
+console.log(tv.volume);
+tv.changeChannel('VTV3');
+console.log(tv.channel);
+remote.changeStatus(tv);
+console.log(tv.status);
+remote.changeChannel(tv,'VTV2');
