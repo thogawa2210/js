@@ -1,4 +1,4 @@
-class Bullet{
+class Skill2{
     constructor(x,y,speed){
         this.x = x;
         this.y = y;
@@ -9,8 +9,9 @@ class Bullet{
     draw(){
         this.ctx.beginPath();
         const image = new Image();
-        image.src = 'skill.png';
-        this.ctx.drawImage(image, this.x, this.y,500,60);
+        image.src = 'skill2.png';
+        this.ctx.drawImage(image, this.x, this.y,50,50);
         this.ctx.closePath();
+        this.x += this.speed;
     }
 }

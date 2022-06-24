@@ -1,9 +1,10 @@
 class Monster{
-    constructor(x,y,width,height){
+    constructor(index,x,y,width,height){
+        this.index = index;
         this.width = width;
         this.height = height;
-        this.x = x;
-        this.y = y;
+        this.x = Math.floor(Math.random()*700+700);
+        this.y = Math.floor(Math.random()*700);
         this.canvas = document.getElementById("myCanvas");
         this.ctx = this.canvas.getContext("2d");
     }
@@ -15,6 +16,6 @@ class Monster{
         this.ctx.closePath();
     }
     moveLeft(){
-        this.x -= 5;
+        this.x -= 1;
     }
 }

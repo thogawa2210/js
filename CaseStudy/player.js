@@ -11,7 +11,7 @@ class Player{
     draw(){
         this.ctx.beginPath();
         const image = new Image(this.width, this.height);
-        image.src = 'player.jpg';
+        image.src = 'goku.png';
         this.ctx.drawImage(image, this.x, this.y,50,60);
         this.ctx.closePath();
     }
@@ -28,6 +28,8 @@ class Player{
         this.x += this.speed;
     }
     fire(Bullet){
+        Bullet.x = this.x+30;
+        Bullet.y = this.y;
         Bullet.draw();
     }
 }
