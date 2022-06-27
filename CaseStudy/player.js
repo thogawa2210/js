@@ -11,7 +11,7 @@ class Player{
     draw(){
         this.ctx.beginPath();
         const image = new Image(this.width, this.height);
-        image.src = 'goku.png';
+        image.src = 'image/goku.png';
         this.ctx.drawImage(image, this.x, this.y,50,60);
         this.ctx.closePath();
     }
@@ -27,9 +27,15 @@ class Player{
     moveRight(){
         this.x += this.speed;
     }
-    fire(Bullet){
-        Bullet.x = this.x+30;
-        Bullet.y = this.y;
-        Bullet.draw();
+    skill1(Skill1){
+        Skill1.x = this.x+30;
+        Skill1.y = this.y;
+        Skill1.draw();
+    }
+
+    skill2(Skill2){
+        Skill2.x += this.x +30;
+        Skill2.y = this.y;
+        Skill2.draw();
     }
 }
