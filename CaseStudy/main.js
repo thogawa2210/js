@@ -2,7 +2,7 @@
 let player = new Player(0,300,50,50);
 
 let monster = [];
-for(let i=0; i<20; i++){
+for(let i=0; i<2; i++){
     monster.push(new Monster(i));
 }
 
@@ -16,9 +16,9 @@ function drawSkill2(){
     }
 }
 
-// Gọi các hàm:
-let boss = new Boss(1000,250,10, 100);
+let boss = new Boss(1000,250,3, 100);
 
+// Gọi các hàm:
 function checkRemoveSkill2(){
     for(let i=0; i<skill2.length; i++){
         if(skill2[i].x >1400){
@@ -44,9 +44,11 @@ function clearCanvas(){
 }
 
 function collisionSkill1(Monster,Skill) {
-    if (Monster.x <= Skill.x + 500
+    if (Monster.x <= Skill.x + Skill.width
         && Skill.y + 50 >= Monster.y
         && Skill.y <= Monster.y + 60) {
+        Skill.flag = false;
+        Skill1.x = 0;
         monster.splice(0, 1);
     }
 }
@@ -62,10 +64,12 @@ function collisionSkill2(Monster,Skill2) {
 }
 
 function collisionBoss1(Boss,Skill1){
-    if(Boss.x <= Skill1.x +500
-    && Skill1.y +50 >= Boss.y
-    && Skill1.y <= Boss.y +300){
+    if(Boss.x <= Skill1.x + Skill1.width
+        && Skill1.y +60 >= Boss.y
+        && Skill1.y <= Boss.y +300){
         Boss.health -=3;
+        Skill1.flag = false;
+        Skill1.x = 0;
     }
 }
 
@@ -95,13 +99,22 @@ function play(){
     drawBackground();
     player.draw();
     drawSkill2();
-    if(monster.length !== 0) {
+    if(monster[0]!= null) {
         monster[0].draw();
+        collisionPlayer(monster[0],player);
         collisionSkill1(monster[0],skill1);
         collisionSkill2(monster[0],skill2);
-        collisionPlayer(monster[0],player);
+    }
+    if(skill1.flag === true){
+        skill1.newDraw();
     }
     boss.draw(monster);
+    for(let i=0; i<skill2.length; i++){
+        collisionBoss2(boss,skill2);
+    }
+    if(boss.health>0){
+        collisionBoss1(boss,skill1);
+    }
     checkRemoveSkill2();
     win();
     requestAnimationFrame(play);
@@ -128,17 +141,13 @@ window.addEventListener('keydown', function(event) {
         case 40:
             player.moveDown();
             break
-        case 32:
-            player.skill1(skill1);
-            if(boss.health>0){
-                collisionBoss1(boss,skill1);
-            }
-            break
         case 74:
             skill2.push(new Skill2(0,300));
-            for(let i=0; i<skill2.length; i++){
-                collisionBoss2(boss,skill2);
-            }
             break;
+        case 75:
+            skill1.width = 300;
+            skill1.flag = true;
+            player.skill1(skill1);
+            break
     }
 })

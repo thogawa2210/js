@@ -30,7 +30,7 @@ class Player{
     skill1(Skill1){
         Skill1.x = this.x+30;
         Skill1.y = this.y;
-        Skill1.draw();
+        Skill1.newDraw();
     }
 
     skill2(Skill2){

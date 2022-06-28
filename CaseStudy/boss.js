@@ -38,9 +38,9 @@ class Boss{
         }
     }
     moveTop() {
-        this.y -= 3;
+        this.y -= this.speed;
     }
     moveDown() {
-        this.y += 3;
+        this.y += this.speed;
     }
 }
