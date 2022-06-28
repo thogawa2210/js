@@ -2,7 +2,7 @@
 let player = new Player(0,300,50,50);
 
 let monster = [];
-for(let i=0; i<2; i++){
+for(let i=0; i<20; i++){
     monster.push(new Monster(i));
 }
 
@@ -80,6 +80,15 @@ function collisionBoss2(Boss,Skill2){
     }
 }
 
+function collisionPlayer(Monster, Player){
+    if(Player.x +50 >= Monster.x
+        && Player.x -50 <= Monster.x
+        && Monster.y + 60 >= Player.y
+        && Monster.y <= Player.y +60){
+        alert("You lose!");
+    }
+}
+
 // Hàm play():
 function play(){
     clearCanvas();
@@ -90,14 +99,13 @@ function play(){
         monster[0].draw();
         collisionSkill1(monster[0],skill1);
         collisionSkill2(monster[0],skill2);
+        collisionPlayer(monster[0],player);
     }
     boss.draw(monster);
     checkRemoveSkill2();
     win();
     requestAnimationFrame(play);
 }
-play();
-// setInterval(play, 300);
 
 function win(){
     if(boss.health <= 0) {
