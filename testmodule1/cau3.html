@@ -10,12 +10,29 @@
     function sumOfListPrime(x){
         let sum = 0;
         for(let i = 0; i <= x;i++){
-            sum += i;
+            if(checkPrime(i)){
+                sum += i;
+            }
         }
         return sum;
     }
+    function checkPrime(n){
+        if(n<2){
+            return false;
+        }else if(n === 2){
+            return true;
+        }else{
+            let flag = true;
+            for(let i = 2; i <= Math.sqrt(n); i++){
+                if(n % i === 0){
+                    flag = false;
+                }
+            }
+            return flag;
+        }
+    }
     //Demo
-    let x =10;
+    let x =100;
     let result = sumOfListPrime(x);
     console.log(result);
 </script>
