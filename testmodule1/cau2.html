@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    // Tạo hàm
+    function insertNumberToArray(arr,x,index){
+        let newArr = [];
+        if(index <0){
+            newArr = arr;
+            return newArr;
+        }else if( index > arr.length){
+            newArr = arr;
+            return newArr;
+        }else {
+            arr.splice(index,0,x);
+            newArr = arr;
+            return newArr;
+        }
+    }
+    // Demo
+    let arr = [1,2,3,4,5,6,7];
+    let result = insertNumberToArray(arr,100,4);
+    console.log(result);
+</script>
+</body>
+</html>

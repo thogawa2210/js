@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    // Tạo hàm
+    function findAverage(arrPoints){
+        let sum = 0;
+        let average = 0;
+        for( let i = 0; i < arrPoints.length; i++ ){
+            sum += arrPoints[i];
+        }
+        average = sum/arrPoints.length;
+        return average.toFixed(2);
+    }
+    // Demo
+    let arrPoints = [10,9,8,5,8,6];
+    let result = findAverage(arrPoints);
+    console.log(result);
+</script>
+</body>
+</html>

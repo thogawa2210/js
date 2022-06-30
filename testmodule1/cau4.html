@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4</title>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+<script>
+    //Tạo class
+  class Rectangle{
+    constructor(x, y, width, height,color){
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+      this.color = color;
+    }
+    render(canvas){
+        this.ctx = canvas.getContext("2d");
+        this.ctx.beginPath();
+        this.ctx.rect(this.x, this.y, this.width, this.height);
+        this.ctx.strokeStyle = this.color;
+        this.ctx.stroke();
+        this.ctx.closePath();
+    }
+  }
+  // Vẽ HCN
+  let rect = new Rectangle(10,10,100,200,'#ff0000');
+  let canvas = document.getElementById("canvas");
+  rect.render(canvas);
+</script>
+</body>
+</html>
