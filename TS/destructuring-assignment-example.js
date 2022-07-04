@@ -62,6 +62,6 @@ const marks = {
     section2: { alpha: -31, beta: 19 }
 };
 const { section1 : { alpha: alpha1, beta: beta1 }} = marks;
-const { section2 : { alpha: a, beta: b }} = marks;
+// const { section2 : { alpha: a, beta: b }} = marks;
 console.log(alpha1, beta1);
-console.log(a,b);
+// console.log(a,b);
