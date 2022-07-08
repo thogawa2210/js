@@ -1,0 +1,26 @@
+"use strict";
+exports.__esModule = true;
+var Circle_1 = require("./Circle");
+var Cylinder_1 = require("./Cylinder");
+var Rectangle_1 = require("./Rectangle");
+var Square_1 = require("./Square");
+var circle = new Circle_1.Circle('Hình tròn', 10);
+var cylinder = new Cylinder_1.Cylinder('Hình tụ', 10, 20);
+var rectangle = new Rectangle_1.Rectangle(20, 30, 'Hình chữ nhật');
+var square = new Square_1.Square('Hình vuông', 50);
+// console.log(circle.show());
+// console.log(circle.calculateArea());
+// circle.resizeable(2);
+// console.log(circle.calculateArea());
+// console.log(cylinder.show());
+// console.log(cylinder.calculateVolume());
+// cylinder.resizeable(2);
+// console.log(cylinder.calculateVolume());
+// console.log(rectangle.show());
+//
+console.log(square.show());
+console.log(square.calculatePerimeter());
+console.log(square.calculateArea());
+square.resizeable(2);
+console.log(square.calculatePerimeter());
+console.log(square.calculateArea());
