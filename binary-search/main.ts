@@ -9,3 +9,7 @@ tree.insert(4);
 
 console.log(`The numbers of nodes: ${tree.totalNode}`)
 tree.inorder(tree.root)
+
+tree.delete(7)
+
+tree.inorder(tree.root)

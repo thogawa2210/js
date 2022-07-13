@@ -7,5 +7,7 @@ tree.insert(5);
 tree.insert(7);
 tree.insert(3);
 tree.insert(4);
-console.log("The numbers of nodes ".concat(tree.totalNode));
+console.log("The numbers of nodes: ".concat(tree.totalNode));
+tree.inorder(tree.root);
+tree["delete"](7);
 tree.inorder(tree.root);

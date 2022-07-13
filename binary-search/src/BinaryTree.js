@@ -56,6 +56,57 @@ var BinaryTree = /** @class */ (function () {
             return currentNode;
         }
     };
+    BinaryTree.prototype["delete"] = function (data) {
+        this.root = this.deleteRecursively(this.root, data);
+    };
+    BinaryTree.prototype.deleteRecursively = function (root, data) {
+        if (root === null) {
+            return null;
+        }
+        if (root.data === data) {
+            // eliminamos
+            root = this.deleteNode(root); // -> devuelve la misma estructura con el nodo eliminado
+        }
+        else if (data < root.data) {
+            // nos movemos a la izquierda
+            root.left = this.deleteRecursively(root.left, data);
+        }
+        else {
+            // derecha
+            root.right = this.deleteRecursively(root.right, data);
+        }
+        return root;
+    };
+    BinaryTree.prototype.deleteNode = function (root) {
+        if (root.left === null && root.right === null) {
+            // es hoja
+            return null;
+        }
+        else if (root.left !== null && root.right !== null) {
+            // tiene dos hijos
+            var successorNode = this.getSuccessor(root.left);
+            var successorValue = successorNode.data;
+            root = this.deleteRecursively(root, successorValue);
+            root.data = successorValue;
+            return root;
+        }
+        else if (root.left !== null) {
+            // tiene izquierdo
+            return root.left;
+        }
+        // derecho
+        return root.right;
+    };
+    BinaryTree.prototype.getSuccessor = function (node) {
+        var currentNode = node;
+        while (currentNode) {
+            if (currentNode.right === null) {
+                break;
+            }
+            currentNode = currentNode.right;
+        }
+        return currentNode;
+    };
     return BinaryTree;
 }());
 exports.BinaryTree = BinaryTree;
