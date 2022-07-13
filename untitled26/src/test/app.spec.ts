@@ -1,28 +1,59 @@
-import {AbsoluteNumberCalculator} from "../app";
+// import {AbsoluteNumberCalculator} from "../app";
+//
+// describe("testFindAbsolute0", () => {
+//     test("testFindAbsolute0", () => {
+//         let number = 0;
+//         let expected = 0;
+//
+//         expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+//     });
+// });
+//
+// describe("testFindAbsolute1", () => {
+//     test("testFindAbsolute1", () => {
+//         let number = 1;
+//         let expected = 1;
+//
+//         expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+//     });
+// });
+//
+// describe("testFindAbsoluteNegative1", () => {
+//     test("testFindAbsoluteNegative1", () => {
+//         let number = -1;
+//         let expected = 1;
+//
+//         expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+//     });
+// });
 
-describe("testFindAbsolute0", () => {
-    test("testFindAbsolute0", () => {
-        let number = 0;
-        let expected = 0;
+import {BasicCalculator} from "../app";
 
-        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+describe('BasicCalulator Testing', () => {
+    let calc: BasicCalculator = new BasicCalculator();
+
+
+    test('should return an instance of a basic calculator', () => {
+        expect(calc).toEqual({});
     });
-});
 
-describe("testFindAbsolute1", () => {
-    test("testFindAbsolute1", () => {
-        let number = 1;
-        let expected = 1;
 
-        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+    test('should return the addition of a + b', () => {
+        expect(calc.add(1,3)).toEqual(4);
     });
-});
 
-describe("testFindAbsoluteNegative1", () => {
-    test("testFindAbsoluteNegative1", () => {
-        let number = -1;
-        let expected = 1;
 
-        expect(AbsoluteNumberCalculator.findAbsolute(number)).toEqual(expected);
+    test('should return the subtraction of a - b', () => {
+        expect(calc.subtract(1,3)).toEqual(-2);
+    });
+
+
+    test('should return the multple of a * b', () => {
+        expect(calc.multiple(1,3)).toEqual(3);
+    });
+
+
+    test('should return the divide of a / b', () => {
+        expect(calc.divide(1,3)).toEqual(1/3);
     });
 });
